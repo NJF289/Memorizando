@@ -4,7 +4,7 @@ document.getElementById('num-players').addEventListener('change', function() {
     playerNamesDiv.innerHTML = '';
 
     if (numPlayers < 1 || numPlayers > 4) {
-        alert("O número de jogadores deve ser entre 1 e 4.");
+        //alert("O número de jogadores deve ser entre 1 e 4.");
     } else {
         for (let i = 1; i <= numPlayers; i++) {
             const input = document.createElement('input');
