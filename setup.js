@@ -3,8 +3,8 @@ document.getElementById('num-players').addEventListener('change', function() {
     const playerNamesDiv = document.getElementById('player-names');
     playerNamesDiv.innerHTML = '';
 
-    if (numPlayers > 4) {
-        alert("O número máximo de jogadores é 4.");
+    if (numPlayers < 1 || numPlayers > 4) {
+        alert("O número de jogadores deve ser entre 1 e 4.");
     } else {
         for (let i = 1; i <= numPlayers; i++) {
             const input = document.createElement('input');
@@ -14,7 +14,7 @@ document.getElementById('num-players').addEventListener('change', function() {
             input.required = true;
             playerNamesDiv.appendChild(input);
         }
-    }  
+    } 
 });
 
 document.getElementById('setup-form').addEventListener('submit', function(event) {
