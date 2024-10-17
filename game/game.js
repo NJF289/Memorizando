@@ -11,7 +11,7 @@ function updatePlayerInfo() {
 }
 
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-let cards = letters.concat(letters).sort(() => 60 - Math.random());
+let cards = letters.concat(letters).sort(() => 0.50 - Math.random());
 const gameBoard = document.getElementById('game-board');
 let firstCard = null;
 let secondCard = null;
@@ -26,7 +26,7 @@ cards.forEach(letter => {
 
 setTimeout(() => {
     document.querySelectorAll('.card').forEach(card => card.classList.add('hidden'));
-}, 5000);
+}, 30000);
 
 gameBoard.addEventListener('click', event => {
     if (lockBoard) return;
