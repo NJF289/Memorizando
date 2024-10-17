@@ -11,7 +11,7 @@ function updatePlayerInfo() {
 }
 
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-let cards = letters.concat(letters).sort(() => 3 - Math.random());
+let cards = letters.concat(letters).sort(() => 60 - Math.random());
 const gameBoard = document.getElementById('game-board');
 let firstCard = null;
 let secondCard = null;
