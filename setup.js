@@ -3,14 +3,18 @@ document.getElementById('num-players').addEventListener('change', function() {
     const playerNamesDiv = document.getElementById('player-names');
     playerNamesDiv.innerHTML = '';
 
-    for (let i = 1; i <= numPlayers && i <= 4; i++) {
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.name = `player${i}`;
-        input.placeholder = `Nome do Jogador ${i}`;
-        input.required = true;
-        playerNamesDiv.appendChild(input);
-    }    
+    if (numPlayers > 4) {
+        alert("O número máximo de jogadores é 4.");
+    } else {
+        for (let i = 1; i <= numPlayers; i++) {
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.name = `player${i}`;
+            input.placeholder = `Nome do Jogador ${i}`;
+            input.required = true;
+            playerNamesDiv.appendChild(input);
+        }
+    }  
 });
 
 document.getElementById('setup-form').addEventListener('submit', function(event) {
