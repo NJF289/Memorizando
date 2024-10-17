@@ -8,6 +8,7 @@ body {
     background-image: url('../img/teste.jpg'); /* Adicionar imagem de fundo */
     background-size: cover; /* Cobrir toda a tela com a imagem */
     background-position: center; /* Centralizar a imagem de fundo */
+    user-select: none;
 }
 .main-container {
     display: flex;
@@ -39,9 +40,7 @@ body {
     cursor: pointer;
     background-color: green;
 }
-.card, #player-info {
-    user-select: none; /* Bloqueia a seleção de texto */
-}
+
 .hidden {
     background-color: white;
     color: white;
